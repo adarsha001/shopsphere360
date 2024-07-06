@@ -9,7 +9,7 @@ const cors = require('cors');
 const errorMiddleware = require('./middlewares/error-middleware');
 
 const corsOptions = {
-  origin: ["http://localhost:5173", "https://my-project-hvket2js3-adarshas-projects-1107657e.vercel.app/"],
+  origin: ["http://localhost:5173", "https://my-project-6xvcl3elb-adarshas-projects-1107657e.vercel.app/"],
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
 };
