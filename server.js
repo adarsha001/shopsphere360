@@ -3,13 +3,17 @@ const app = express();
 const authrouter = require('./router/auth.router');
 const contactrouter = require('./router/contactrouter');
 const admin_router = require('./router/admin_router');
-const trendingRouter = require('./router/trending_router'); // Import trending routes
+const trendingRouter = require('./router/trending_router');
 const connectDB = require('./db');
 const cors = require('cors');
 const errorMiddleware = require('./middlewares/error-middleware');
 
 const corsOptions = {
-  origin: ["http://localhost:5173", "https://my-project-6xvcl3elb-adarshas-projects-1107657e.vercel.app/"],
+  origin: [
+    "http://localhost:5173", 
+    "https://my-project-6xvcl3elb-adarshas-projects-1107657e.vercel.app",
+    "https://my-project-5te75et1q-adarshas-projects-1107657e.vercel.app"
+  ],
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
 };
@@ -17,16 +21,14 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-app.use(express.json());
-app.get("/",(req,res)=>{
-  res.json("hello")
-})
-app.use(express.json());
+app.get("/", (req, res) => {
+  res.json("hello");
+});
 
 app.use('/api/auth', authrouter);
 app.use('/api/form', contactrouter);
 app.use('/api/admin', admin_router);
-app.use('/api/trending', trendingRouter); // Use trending routes
+app.use('/api/trending', trendingRouter);
 
 app.use(errorMiddleware);
 
