@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.route("/").get(Home);
 // Apply the validate middleware before the register controller
-router.route("/").post(validate(signupSchema), register);
+router.route("/registation").post(validate(signupSchema), register);
 router.route("/hello").get(hello);
 router.route("/login").post(validate(loginSchema),login);
 router.route("/user").get(authmiddleware, user)
