@@ -12,7 +12,7 @@ const corsOptions = {
   origin: [
     "http://localhost:5173", 
     "https://my-project-pfajtgtdf-adarshas-projects-1107657e.vercel.app",
-    "https://my-project-5te75et1q-adarshas-projects-1107657e.vercel.app"
+    "https://my-project-mntgt7wnw-adarshas-projects-1107657e.vercel.app/"
   ],
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
