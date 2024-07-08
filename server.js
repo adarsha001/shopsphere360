@@ -12,7 +12,7 @@ const corsOptions = {
   origin: [
     "http://localhost:5173", 
 
-    "https://my-project-i4praglzo-adarshas-projects-1107657e.vercel.app"
+    "https://www.shopsphere360.in"
   ],
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
